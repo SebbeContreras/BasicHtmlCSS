@@ -1,0 +1,448 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+header .logo {
+  width: 200px;
+}
+header .logo img {
+  width: 12.5rem;
+  height: auto;
+}
+header .nav {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav .active {
+  color: sandybrown;
+}
+header .nav a {
+  text-transform: uppercase;
+  margin-inline: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+header .nav a:hover {
+  color: sandybrown;
+}
+header .nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: sandybrown;
+  transform-origin: center;
+  transition: transform 0.25s;
+  transform: scaleX(0);
+}
+header .nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+header .nav .active::after {
+  transform: scaleX(1);
+}
+
+main {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+main .info_text {
+  margin-left: 5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .info_text h1 {
+  font-size: 7vw;
+  color: black;
+  z-index: 1;
+}
+main .info_text a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  z-index: 1;
+}
+main .info_text a::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  background: sandybrown;
+  transform: scale(1);
+  transition: 0.5s;
+}
+main .info_text a:hover::after {
+  transform: scale(1.5);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1rem;
+  width: 100%;
+  height: auto;
+  background: whitesmoke;
+  padding-bottom: 5rem;
+}
+aside .section_header {
+  text-align: center;
+  line-height: 4;
+  position: relative;
+}
+aside .section_header h2 {
+  font-weight: 300;
+}
+aside .section_header h2::before, aside .section_header h2::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin: 0.3rem 1rem;
+  width: 20%;
+  height: 0.1rem;
+  border-top: 0.1rem solid;
+}
+aside .cardbox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+aside .card {
+  box-sizing: border-box;
+  display: flex;
+  border: 0.01rem solid;
+  width: 25rem;
+  height: 15rem;
+  border-radius: 10px;
+  margin: 1rem;
+}
+aside .card .card__img {
+  width: 15rem;
+  height: auto;
+  background-position: left top;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+aside .card #img1 {
+  background: url(/Bilder/card_img_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card #img2 {
+  background: url(/Bilder/card_img_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card #img3 {
+  background: url(/Bilder/card_img_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card #img1:hover {
+  background: url(/Bilder/card_img_hover_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card #img2:hover {
+  background: url(/Bilder/card_img_hover_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card #img3:hover {
+  background: url(/Bilder/card_img_hover_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+aside .card .card__info {
+  display: flex;
+  flex-direction: column;
+}
+aside .card .card__info h5 {
+  color: grey;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+}
+aside .card .card__info h5, aside .card .card__info h4 {
+  padding: 0.5rem 0 0 1rem;
+}
+aside .card .card__info .price {
+  margin: 5rem auto;
+}
+aside .card .card__info .price button {
+  padding: 0.3rem 3rem;
+}
+
+footer {
+  height: 10rem;
+  background: rgb(196, 196, 196);
+}
+footer .footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+footer .footer__wrapper .footer__logo {
+  width: 15vw;
+}
+footer .footer__wrapper .footer__logo img {
+  width: 15vw;
+  height: auto;
+}
+footer .footer__wrapper .footer__nav ul li {
+  list-style-type: none;
+  margin-top: 0.5rem;
+}
+footer p {
+  text-align: center;
+}
+
+.index__main {
+  background-image: url(/Bilder/vitoandwilly-dx0Df9VJYfE-unsplash.jpg);
+  background-position: 76% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: visible;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about__header {
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background: white;
+}
+
+.about__main {
+  margin-top: 7rem;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  margin: 1rem 0;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container section {
+  box-sizing: border-box;
+  width: 90vw;
+  height: auto;
+}
+.container section .about__img {
+  width: 90vw;
+}
+.container .history__header {
+  line-height: 2;
+  color: black;
+}
+
+.aside__header {
+  text-align: center;
+  padding-top: 2rem;
+  color: black;
+}
+
+.portrait__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  grid-gap: 2rem;
+  margin-inline: auto;
+}
+.portrait__container .portrait__card {
+  height: 15rem;
+  width: 12rem;
+  margin: 1rem;
+  position: relative;
+}
+.portrait__container .portrait__card::after {
+  content: "";
+  width: 104.3%;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 80%;
+  left: 0;
+}
+.portrait__container figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 20%;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+.portrait__container figcaption h4, .portrait__container figcaption h5 {
+  color: white;
+}
+
+.contact__main {
+  height: auto;
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+  width: 100%;
+  height: auto;
+}
+
+.formbox {
+  width: 20rem;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.contact__form input, .contact__form .select_label, .contact__form textarea {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  overflow: visible;
+}
+.contact__form .input_text:focus {
+  border: 0.1rem solid skyblue;
+}
+.contact__form .name_label {
+  position: absolute;
+  top: 7.5%;
+  left: 4%;
+  background: white;
+}
+.contact__form .email_label {
+  position: absolute;
+  top: 22%;
+  left: 4%;
+  background-color: white;
+}
+.contact__form span {
+  margin-top: 1rem;
+}
+.contact__form :is(.input_text:focus) + label {
+  transform: translateY(-25px);
+  transition: 0.75s;
+  color: blue;
+}
+
+.contact__info {
+  margin-left: 5vw;
+  width: 80vw;
+}
+
+.productbox {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 10rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+}
+
+.product__img {
+  background-image: url(/Bilder/card_img_1.jpg);
+  width: 95%;
+  height: 20rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.product__info {
+  margin: 1rem auto;
+}
+
+@media (min-width: 980px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .logo {
+    margin-left: 2rem;
+  }
+  header .nav a {
+    font-size: 1.5rem;
+    margin-inline: 3rem;
+  }
+  .contact__container {
+    flex-direction: row;
+  }
+  .contact__info {
+    width: 15rem;
+  }
+  .about__header {
+    position: relative;
+  }
+  .about__main {
+    height: auto;
+  }
+  .container {
+    margin: 0;
+    flex-direction: row;
+  }
+  .container section {
+    width: 40%;
+  }
+  .container section .about__img {
+    width: 100%;
+  }
+  .product {
+    width: 25%;
+  }
+}/*# sourceMappingURL=style.css.map */
